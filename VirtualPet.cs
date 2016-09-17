@@ -8,21 +8,48 @@ namespace MyVirturalPet
 {
     class VirtualPet
     {
+        //fields
         private int petBathroom;
         private int petThirst;
         private int petHungry;
         private int petBored;
 
 
-        //contructors
-        public VirtualPet(int bathroom, int thirst, int hungry, int bored)
-        {
-            this.petBathroom = bathroom;
-            this.petThirst = thirst;
-            this.petHungry = hungry;
-            this.petBored = bored;
+        //properties
 
+       public int Bathroom
+             {
+               get {return this.petBathroom;}
+               set {this.petBathroom = value;}
              }
+
+        public int Thirst
+             {
+                get {return this.petThirst;}
+                set {this.petThirst = value;}
+             }
+
+        public int Hungry
+             {
+                get {return this.petHungry;}
+                set {this.petHungry = value;}
+             }
+
+         public int Bored
+             {
+                get {return this.petBored;}
+                set {this.petBored = value;}
+             }
+
+
+        //contructor
+        public VirtualPet(int petBathroom, int petThirst, int petHungry, int petBored)
+            {
+            this.petBathroom = petBathroom;
+            this.petThirst = petThirst;
+            this.petHungry = petHungry;
+            this.petBored = petBored;
+            }
 
 
 
