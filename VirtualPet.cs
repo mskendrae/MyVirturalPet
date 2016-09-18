@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace MyVirturalPet
 {
-    class VirtualPet
+    class VirtualPet 
     {
         //fields
-        private int petPoop;
-        private int petThirst;
-        private int petHungry ;
-        private int petBored;
+        private int petPoop = 7;
+        private int petThirst = 6;
+        private int petHungry =8 ;
+        private int petBored = 3;
       //  private int petStatus;
 
         //properties
@@ -20,35 +20,43 @@ namespace MyVirturalPet
         public int Poop
         {
             get { return this.petPoop; }
-            set { this.petPoop = 10; }
+            set { this.petPoop = value; }
         }
 
         public int Thirst
         {
             get { return this.petThirst; }
-            set { this.petThirst = 7; }
+            set { this.petThirst = value; }
         }
 
         public int Hunger
         {
             get { return this.petHungry; }
-            set { this.petHungry = 8; }
+            set { this.petHungry = value; }
         }
 
         public int Bored
         {
             get { return this.petBored; }
-            set { this.petBored = 5; }
+            set { this.petBored = value; }
         }
 
-      //  public int Status
-      // {
-      //      get { return this.petStatus; }
-      //      set { this.petStatus = value; }
-    //    }
+        //contructor
+        public VirtualPet()
+        {
 
-       
-        //methods
+        }
+
+        public VirtualPet(int petPoop, int petThirst, int petHungry, int petBored)
+        {
+            this.petPoop = petPoop;
+            this.petThirst = petThirst;
+            this.petHungry = petHungry;
+            this.petBored = petBored;
+        }
+
+
+        //methods -- VERBS
 
         public int feedPet()
            {
@@ -57,9 +65,14 @@ namespace MyVirturalPet
             petHungry -= 3;
             petBored +=2;
 
-             return petHungry; 
-            }
+            Console.WriteLine("Hunger = " + Hunger);
+            Console.WriteLine("Thirst = " + Thirst);
+            Console.WriteLine("Needs a Break = " + Poop);
+            Console.WriteLine("Play  =" + Bored);
 
+            return petHungry; 
+            }
+        
         public int waterPet()
           {
             petPoop += 2;
@@ -91,19 +104,7 @@ namespace MyVirturalPet
             return petBored;
         }
 
-        //contructor
-        public VirtualPet()
-        {
-
-        }
-
-        public VirtualPet(int petPoop, int petThirst, int petHungry, int petBored)
-        {
-            this.petPoop = petPoop;
-            this.petThirst = petThirst;
-            this.petHungry = petHungry;
-            this.petBored = petBored;
-        }
+       
 
 
 
