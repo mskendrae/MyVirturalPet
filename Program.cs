@@ -35,22 +35,24 @@ namespace MyVirturalPet
             Console.WriteLine("Please name your panda:");
             string pandaName = Console.ReadLine();
 
-            //Display Status of pet
+            //Connect the VirtualPet class to the main. by using "panda" as the reference
             VirtualPet panda = new VirtualPet();
 
 
-
-
+            //this is the initial menu area showing the initial pet health and the menu choices.
             Console.WriteLine("Please keep an eye on the health status of " + pandaName + " choose from the menu ways to care for your panda.");
 
-            Console.WriteLine("Hunger = " + panda.Hunger); 
+            //Initial pet health
+            Console.WriteLine("Hunger = " + panda.Hunger);
             Console.WriteLine("Thirst = " + panda.Thirst);
             Console.WriteLine("Needs a Break = " + panda.Poop);
             Console.WriteLine("Play with  " + pandaName + " = " + panda.Bored);
 
+            //Spacing
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
+
 
             //UserInstructions to care for the Panda and accept user input
             Console.WriteLine("Please enter a number");
@@ -60,25 +62,40 @@ namespace MyVirturalPet
             Console.WriteLine("4. Play with your panda outside?");
             int menuChoice = int.Parse(Console.ReadLine());
 
+            if (menuChoice >= 1 && menuChoice <= 4)
+                {
 
-            switch (menuChoice)
-            {
-                case 1:
-                panda.feedPet();
-                break;
+                    switch (menuChoice)
+                   {
+                    case 1:
+                        panda.feedPet();
+                        panda.mainMenu();
+                        break;
 
-                case 2:
-                panda.waterPet();
-                break;
+                    case 2:
+                        panda.waterPet();
+                        panda.mainMenu();
+                        break;
 
-                case 3:
-                panda.walkPet();
-                break;
+                    case 3:
+                        panda.walkPet();
+                        panda.mainMenu();
+                        break;
 
-                case 4:
-                panda.playBall();
-                break;
-            }
+                    case 4:
+                        panda.playBall();
+                        panda.mainMenu();
+                        break;
+                    }//end switch
+
+                  }  //end top if
+
+                    else
+                    {
+                    panda.wrongChoice();
+                    } // end else
+
+                   
 
 
             Console.ReadLine();

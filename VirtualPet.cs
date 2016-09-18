@@ -56,7 +56,10 @@ namespace MyVirturalPet
         }
 
 
-        //methods -- VERBS
+        //methods -- VERBS 
+        // All of these methods change the counters of the pets health each time a menu
+        //choice is made.  All variables are effected.  methods also prints out the new
+        //heath of the pet.
 
         public int feedPet()
            {
@@ -65,10 +68,12 @@ namespace MyVirturalPet
             petHungry -= 3;
             petBored +=2;
 
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("Hunger = " + Hunger);
             Console.WriteLine("Thirst = " + Thirst);
             Console.WriteLine("Needs a Break = " + Poop);
-            Console.WriteLine("Play  =" + Bored);
+            Console.WriteLine("Play = " + Bored);
 
             return petHungry; 
             }
@@ -80,6 +85,13 @@ namespace MyVirturalPet
             petHungry += 1;
             petBored += 3;
 
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Hunger = " + Hunger);
+            Console.WriteLine("Thirst = " + Thirst);
+            Console.WriteLine("Needs a Break = " + Poop);
+            Console.WriteLine("Play = " + Bored);
+
             return petThirst;
           }
 
@@ -89,6 +101,13 @@ namespace MyVirturalPet
             petThirst += 2;
             petHungry += 2;
             petBored -= 3;
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Hunger = " + Hunger);
+            Console.WriteLine("Thirst = " + Thirst);
+            Console.WriteLine("Needs a Break = " + Poop);
+            Console.WriteLine("Play = " + Bored);
 
             return petPoop;
           }
@@ -101,14 +120,46 @@ namespace MyVirturalPet
             petHungry += 2;
             petBored -= 4;
 
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Hunger = " + Hunger);
+            Console.WriteLine("Thirst = " + Thirst);
+            Console.WriteLine("Needs a Break = " + Poop);
+            Console.WriteLine("Play = " + Bored);
+
             return petBored;
         }
 
-       
+            public void mainMenu()
+            {
+            Console.WriteLine();
+            Console.WriteLine("Please enter an number");
+            Console.WriteLine();
+            Console.WriteLine("1. Give panda Bamboo?");
+            Console.WriteLine("2. Give panda water?");
+            Console.WriteLine("3. Let pet out to poop?");
+            Console.WriteLine("4. Play with your panda outside?");
+            int menuChoice = int.Parse(Console.ReadLine());
 
+             }             
+    
+        public int wrongChoice()
+             {
 
+            Console.WriteLine();
+            Console.WriteLine("Sorry, Please enter an number 1 through 4");
+            Console.WriteLine();
+            Console.WriteLine("1. Give panda Bamboo?");
+            Console.WriteLine("2. Give panda water?");
+            Console.WriteLine("3. Let pet out to poop?");
+            Console.WriteLine("4. Play with your panda outside?");
+            int menuChoice = int.Parse(Console.ReadLine());
 
+            return menuChoice;
+            
+        }
 
+  
     }// end class
 
 
