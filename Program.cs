@@ -64,7 +64,7 @@ namespace MyVirturalPet
             int menuChoice = int.Parse(Console.ReadLine());
             do
             {
-                if (menuChoice >= 1 && menuChoice <= 4)
+                if (menuChoice >= 1 && menuChoice <= 5)
                 {
 
                     switch (menuChoice)
@@ -88,14 +88,14 @@ namespace MyVirturalPet
                             panda.playBall();
                             panda.mainMenu();
                             break;
+
+                        case 5:
+                            panda.sleep();
+                            break;
+
                     }//end switch
 
                 }  //end top if
-
-                else if (menuChoice == 5)
-                {
-                    panda.sleep();
-                }
 
                 else if (menuChoice <= 0 || menuChoice >= 6)
                 {

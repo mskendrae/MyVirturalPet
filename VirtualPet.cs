@@ -9,10 +9,10 @@ namespace MyVirturalPet
     class VirtualPet 
     {
         //fields
-        private int petPoop = 7;
-        private int petThirst = 6;
-        private int petHungry =8 ;
-        private int petBored = 3;
+        private int petPoop = 50;
+        private int petThirst =50;
+        private int petHungry =50;
+        private int petBored = 50;
       //  private int petStatus;
 
         //properties
@@ -65,7 +65,7 @@ namespace MyVirturalPet
            {
             petPoop ++;
             petThirst ++;
-            petHungry -= 3;
+            petHungry -= 5;
             petBored +=2;
 
             Console.WriteLine();
@@ -81,7 +81,7 @@ namespace MyVirturalPet
         public int waterPet()
           {
             petPoop += 2;
-            petThirst-=3;
+            petThirst-=5;
             petHungry += 1;
             petBored += 3;
 
@@ -97,10 +97,10 @@ namespace MyVirturalPet
 
         public int walkPet()
           {
-            petPoop -= 4;
+            petPoop -= 5;
             petThirst += 2;
             petHungry += 2;
-            petBored -= 3;
+            petBored -= 5;
 
             Console.WriteLine();
             Console.WriteLine();
@@ -115,10 +115,10 @@ namespace MyVirturalPet
 
         public int playBall()
         {
-            petPoop -= 2;
+            petPoop -= 5;
             petThirst += 2;
             petHungry += 2;
-            petBored -= 4;
+            petBored -= 5;
 
             Console.WriteLine();
             Console.WriteLine();
@@ -132,10 +132,16 @@ namespace MyVirturalPet
 
             public void sleep()
              {
-              Console.WriteLine(" Your panda is sleeping.  Thank you for helping to care for our panda.")
+            Console.WriteLine(" Your panda is sleeping.  Thank you for helping to care for our panda.");
+            Console.WriteLine("Please type 5 again to quit.");
+            int userExit = int.Parse(Console.ReadLine());
+            if (userExit == 5)
+            {
+                Environment.Exit(0);
+            }
             
-
-             }
+           
+            }//end sleep
 
             public void mainMenu()
             {
@@ -146,6 +152,7 @@ namespace MyVirturalPet
             Console.WriteLine("2. Give panda water?");
             Console.WriteLine("3. Let pet out to poop?");
             Console.WriteLine("4. Play with your panda outside?");
+            Console.WriteLine("5. Let panda sleep");
             int menuChoice = int.Parse(Console.ReadLine());
 
              }             
@@ -154,12 +161,13 @@ namespace MyVirturalPet
              {
 
             Console.WriteLine();
-            Console.WriteLine("Sorry, Please enter an number 1 through 4");
+            Console.WriteLine("Sorry, Please enter an number 1 through 5");
             Console.WriteLine();
             Console.WriteLine("1. Give panda Bamboo?");
             Console.WriteLine("2. Give panda water?");
             Console.WriteLine("3. Let pet out to poop?");
             Console.WriteLine("4. Play with your panda outside?");
+            Console.WriteLine("5. Let panda sleep");
             int menuChoice = int.Parse(Console.ReadLine());
 
             return menuChoice;
