@@ -130,6 +130,13 @@ namespace MyVirturalPet
             return petBored;
         }
 
+            public void sleep()
+             {
+              Console.WriteLine(" Your panda is sleeping.  Thank you for helping to care for our panda.")
+            
+
+             }
+
             public void mainMenu()
             {
             Console.WriteLine();

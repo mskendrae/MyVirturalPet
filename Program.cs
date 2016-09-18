@@ -60,51 +60,49 @@ namespace MyVirturalPet
             Console.WriteLine("2. Give panda water?");
             Console.WriteLine("3. Let pet out to poop?");
             Console.WriteLine("4. Play with your panda outside?");
+            Console.WriteLine("5. Let panda sleep");
             int menuChoice = int.Parse(Console.ReadLine());
-
-            if (menuChoice >= 1 && menuChoice <= 4)
+            do
+            {
+                if (menuChoice >= 1 && menuChoice <= 4)
                 {
 
                     switch (menuChoice)
-                   {
-                    case 1:
-                        panda.feedPet();
-                        panda.mainMenu();
-                        break;
+                    {
+                        case 1:
+                            panda.feedPet();
+                            panda.mainMenu();
+                            break;
 
-                    case 2:
-                        panda.waterPet();
-                        panda.mainMenu();
-                        break;
+                        case 2:
+                            panda.waterPet();
+                            panda.mainMenu();
+                            break;
 
-                    case 3:
-                        panda.walkPet();
-                        panda.mainMenu();
-                        break;
+                        case 3:
+                            panda.walkPet();
+                            panda.mainMenu();
+                            break;
 
-                    case 4:
-                        panda.playBall();
-                        panda.mainMenu();
-                        break;
+                        case 4:
+                            panda.playBall();
+                            panda.mainMenu();
+                            break;
                     }//end switch
 
-                  }  //end top if
+                }  //end top if
 
-                    else
-                    {
+                else if (menuChoice == 5)
+                {
+                    panda.sleep();
+                }
+
+                else if (menuChoice <= 0 || menuChoice >= 6)
+                {
                     panda.wrongChoice();
-                    } // end else
+                } 
 
-                   
-
-
-            Console.ReadLine();
-
-
-
-
-
-
+            } while (true);
 
 
         } //end main
