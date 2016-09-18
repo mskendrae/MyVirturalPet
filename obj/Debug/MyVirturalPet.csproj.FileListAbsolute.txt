@@ -1,1 +1,6 @@
 c:\users\msken\documents\visual studio 2015\Projects\MyVirturalPet\MyVirturalPet\bin\Debug\MyVirturalPet.exe.config
+C:\Users\msken\Documents\Visual Studio 2015\Projects\MyVirturalPet\MyVirturalPet\obj\Debug\MyVirturalPet.csprojResolveAssemblyReference.cache
+C:\Users\msken\Documents\Visual Studio 2015\Projects\MyVirturalPet\MyVirturalPet\bin\Debug\MyVirturalPet.exe
+C:\Users\msken\Documents\Visual Studio 2015\Projects\MyVirturalPet\MyVirturalPet\bin\Debug\MyVirturalPet.pdb
+C:\Users\msken\Documents\Visual Studio 2015\Projects\MyVirturalPet\MyVirturalPet\obj\Debug\MyVirturalPet.exe
+C:\Users\msken\Documents\Visual Studio 2015\Projects\MyVirturalPet\MyVirturalPet\obj\Debug\MyVirturalPet.pdb
