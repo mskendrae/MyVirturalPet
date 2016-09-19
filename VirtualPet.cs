@@ -69,13 +69,15 @@ namespace MyVirturalPet
             petBored +=2;
 
             Console.WriteLine();
+            Console.WriteLine("LingLu\'s  Heath");
             Console.WriteLine("Hunger = " + Hunger);
             Console.WriteLine("Thirst = " + Thirst);
             Console.WriteLine("Dirty = " + Bath);
             Console.WriteLine("Play = " + Bored);
+            Console.WriteLine();
 
-           // return petHungry; 
-            }
+            // return petHungry; 
+        }
         
         public void waterPet()
           {
@@ -85,7 +87,7 @@ namespace MyVirturalPet
             petBored += 3;
 
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("LingLu\'s  Heath");
             Console.WriteLine("Hunger = " + Hunger);
             Console.WriteLine("Thirst = " + Thirst);
             Console.WriteLine("Dirty = " + Bath);
@@ -101,7 +103,7 @@ namespace MyVirturalPet
             petBored -= 5;
 
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("LingLu\'s  Heath");
             Console.WriteLine("Hunger = " + Hunger);
             Console.WriteLine("Thirst = " + Thirst);
             Console.WriteLine("Dirty = " + Bath);
@@ -119,7 +121,7 @@ namespace MyVirturalPet
             petBored -= 5;
 
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("LingLu\'s  Heath");
             Console.WriteLine("Hunger = " + Hunger);
             Console.WriteLine("Thirst = " + Thirst);
             Console.WriteLine("Dirty = " + Bath);

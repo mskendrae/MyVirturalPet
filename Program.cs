@@ -51,21 +51,21 @@ namespace MyVirturalPet
             //Spacing
             Console.WriteLine();
 
-            //UserInstructions to care for the Panda and accept user input
-            Console.WriteLine();
-            Console.WriteLine("Please enter an number");
-            Console.WriteLine();
-            Console.WriteLine("1. Give panda Bamboo?");
-            Console.WriteLine("2. Give panda water?");
-            Console.WriteLine("3. Give panda a bath?");
-            Console.WriteLine("4. Play with " + pandaName + " outside?");
-            Console.WriteLine("5. Let panda sleep and end session");
-            int menuChoice = int.Parse(Console.ReadLine());
-
-
             int counter = 0;
             while (counter <= 10)
             {
+                //UserInstructions to care for the Panda and accept user input
+ 
+                Console.WriteLine("Please enter an number");
+                Console.WriteLine();
+                Console.WriteLine("1. Give panda Bamboo?");
+                Console.WriteLine("2. Give panda water?");
+                Console.WriteLine("3. Give panda a bath?");
+                Console.WriteLine("4. Play with " + pandaName + " outside?");
+                Console.WriteLine("5. Let panda sleep and end session");
+
+                int menuChoice = int.Parse(Console.ReadLine());
+             
                 if (menuChoice <= 0 || menuChoice >= 6)
                 {
                     Console.WriteLine("That is an invalid choice. Press enter to continue.");
@@ -98,16 +98,8 @@ namespace MyVirturalPet
                 }//end esle if
 
                 counter++;
-                Console.WriteLine("Please enter a number:");
-                Console.WriteLine();
-                Console.WriteLine("1. Give panda Bamboo?");
-                Console.WriteLine("2. Give panda water?");
-                Console.WriteLine("3. Give panda bath?");
-                Console.WriteLine("4. Play with  " + pandaName + " outside?");
-                Console.WriteLine("5. Let panda sleep and end session");
-                menuChoice = int.Parse(Console.ReadLine());
+           } //end while
 
-            } //end while
              Console.WriteLine("Thank you for taking care of the Panda today. ");
              Console.ReadLine();
 
